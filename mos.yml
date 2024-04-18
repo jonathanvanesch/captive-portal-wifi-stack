@@ -6,7 +6,7 @@ version: 1.0.0
 
 libs:
   - origin: https://github.com/tripflex/captive-portal
-  - origin: https://github.com/tripflex/captive-portal-wifi-web
+  - origin: https://github.com/jonathanvanesch/captive-portal-wifi-web
   - origin: https://github.com/tripflex/captive-portal-wifi-rpc
   - origin: https://github.com/tripflex/captive-portal-wifi-setup
 
