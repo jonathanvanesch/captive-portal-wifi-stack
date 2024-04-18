@@ -5,10 +5,10 @@ version: 1.0.0
 # platforms: [ cc3200, cc3220, esp32, esp8266 ]
 
 libs:
-  - origin: https://github.com/tripflex/captive-portal
+  - origin: https://github.com/jonathanvanesch/captive-portal
   - origin: https://github.com/jonathanvanesch/captive-portal-wifi-web
-  - origin: https://github.com/tripflex/captive-portal-wifi-rpc
-  - origin: https://github.com/tripflex/captive-portal-wifi-setup
+  - origin: https://github.com/jonathanvanesch/captive-portal-wifi-rpc
+  - origin: https://github.com/jonathanvanesch/captive-portal-wifi-setup
 
 tags:
   - wifi
