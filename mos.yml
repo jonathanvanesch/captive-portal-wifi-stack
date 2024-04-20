@@ -4,6 +4,35 @@ description: Captive Portal WiFi Setup Full Stack (RPC, Web UI, Captive Portal)
 version: 1.0.0
 # platforms: [ cc3200, cc3220, esp32, esp8266 ]
 
+
+  #- ["debug.level", 3]
+  - ["wifi.ap.enable", true]
+  - ["cportal.enable", true]
+  - ["cportal.any", true]
+  - ["cportal.ip_redirect", true]
+  - ["cportal.setup.copy", 0] #, {title: "Copy SSID and Password to this STA ID after succesful test ( 0 - wifi.sta | 1 - wifi.sta1 | 2 - wifi.sta2 )"}]
+  - ["cportal.setup.timeout", 60] #, {title: "Timeout, in seconds, before considering a WiFi connection test as failed"}]
+  - ["cportal.setup.disable", 2] #, {title: "Action to perform after successful test and copy/save values -- 0 - do nothing, 1 - Disable AP (wifi.ap.enable), 2 - Disable AP and Captive Portal (cportal.enable)"}]
+  - ["cportal.setup.enable", 0] #, {title: "Settings to enable after successful test and copy/save values -- 0 - do nothing, 1 - Enable DNS SD (dns_sd.enable)"}]
+  - ["cportal.setup.reboot", 5] #, {title: "0 to disable, or value (in seconds) to wait and then reboot device, after successful test (and copy/save values)"}]
+  #- ["cportal.setup.copy", "i", 0, {title: "Copy SSID and Password to this STA ID after succesful test ( 0 - wifi.sta | 1 - wifi.sta1 | 2 - wifi.sta2 )"}]
+  #- ["cportal.setup.timeout", "i", 60, {title: "Timeout, in seconds, before considering a WiFi connection test as failed"}]
+  #- ["cportal.setup.disable", "i", 2, {title: "Action to perform after successful test and copy/save values -- 0 - do nothing, 1 - Disable AP (wifi.ap.enable), 2 - Disable AP and Captive Portal (cportal.enable)"}]
+  #- ["cportal.setup.enable", "i", 0, {title: "Settings to enable after successful test and copy/save values -- 0 - do nothing, 1 - Enable DNS SD (dns_sd.enable)"}]
+  #- ["cportal.setup.reboot", "i", 5, {title: "0 to disable, or value (in seconds) to wait and then reboot device, after successful test (and copy/save values)"}]
+  - ["cportal.hostname", "airconnect.portal"]
+
+  - ["wifi.ap.ssid", "s", "eClear_??????", {title: "SSID"}]
+  - ["wifi.ap.pass", "s", "12345678", {title: "Password", type: "password"}]
+    # We include these with dummy values and set to false to prevent AP disconnect when scan due to device
+    # only being in AP mode, to switch to AP+STA mode.  With some config set, it starts in AP+STA mode
+  - ["wifi.sta.enable", false ]
+  - ["wifi.sta.ssid", "Dummy_SSID" ]
+  - ["wifi.sta.pass", "Dummy_PASS" ]
+
+
+
+
 libs:
   - origin: https://github.com/jonathanvanesch/captive-portal
   - origin: https://github.com/jonathanvanesch/captive-portal-wifi-web
