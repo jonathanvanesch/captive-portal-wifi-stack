@@ -4,7 +4,7 @@ description: Captive Portal WiFi Setup Full Stack (RPC, Web UI, Captive Portal)
 version: 1.0.0
 # platforms: [ cc3200, cc3220, esp32, esp8266 ]
 
-
+config_schema:
   #- ["debug.level", 3]
   - ["wifi.ap.enable", true]
   - ["cportal.enable", true]
